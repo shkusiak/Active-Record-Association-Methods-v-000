@@ -14,6 +14,6 @@ class Genre < ActiveRecord::Base
 
   def all_artist_names
     # return an array of strings containing every musician's name
-    self.distinct.pluck(:name)
+    self.artists.distinct.pluck(:name)
   end
 end
